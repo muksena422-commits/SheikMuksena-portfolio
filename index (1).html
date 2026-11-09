@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sheik Muksena N | MCA Student Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#050b1f;--surf:rgba(16,28,64,.55);--ink:#e8eefc;--mute:#9db0d6;--line:rgba(120,160,255,.2);--c1:#22d3ee;--c2:#8b5cf6;--c3:#3b82f6;--glow:0 0 22px rgba(34,211,238,.35);--nav:rgba(5,11,31,.8);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+:root[data-theme="light"]{--bg:#f2f6ff;--surf:rgba(255,255,255,.85);--ink:#0b1533;--mute:#4b5a80;--line:rgba(30,64,175,.18);--c1:#0891b2;--c2:#6d28d9;--c3:#1d4ed8;--glow:0 4px 18px rgba(29,78,216,.18);--nav:rgba(242,246,255,.85);color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;line-height:1.15}
+a{color:inherit}button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px;position:relative}
+#cv{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;left:0;top:0;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%);transform:translate(-50%,-50%)}
+main,nav,footer{position:relative;z-index:1}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--nav);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 22px Sora;text-decoration:none;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:22px;align-items:center}
+.links a{text-decoration:none;color:var(--mute);font-size:14.5px;font-weight:500}.links a:hover{color:var(--c1)}
+.ib{background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;width:38px;height:38px}
+.ib:hover{box-shadow:var(--glow);border-color:var(--c1)}
+#bg{display:none}
+.hero{min-height:calc(100vh - 60px);display:flex;align-items:center;padding:50px 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;width:100%}
+.hi{color:var(--c1);font-weight:600;font-size:15px;margin-bottom:10px}
+h1{font-size:clamp(40px,7vw,78px);font-weight:800;letter-spacing:-.02em;text-shadow:0 0 30px rgba(34,211,238,.35)}
+.role{font:600 clamp(18px,2.6vw,26px) Sora;margin:16px 0;min-height:36px;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.cur{display:inline-block;width:3px;height:1em;background:var(--c1);margin-left:3px;vertical-align:-3px;animation:bl 1s steps(2) infinite;box-shadow:var(--glow)}
+@keyframes bl{50%{opacity:0}}
+.sub{color:var(--mute);max-width:52ch;margin:0 0 26px}
+.btn{display:inline-block;padding:12px 26px;border-radius:30px;font-weight:600;text-decoration:none;margin:0 10px 10px 0;transition:.25s}
+.btn.p{background:linear-gradient(90deg,var(--c1),var(--c3));color:#031022;box-shadow:var(--glow)}.btn.p:hover{box-shadow:0 0 34px rgba(34,211,238,.7);transform:translateY(-2px)}
+.btn.s{border:1.5px solid var(--c2)}.btn.s:hover{box-shadow:0 0 24px rgba(139,92,246,.6)}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:22px;backdrop-filter:blur(10px);transition:.3s}
+.card:hover{border-color:var(--c1);box-shadow:var(--glow)}
+.inbox h2{font-size:14px;color:var(--c1);margin-bottom:14px;font-weight:600}
+.inbox{min-height:310px;border-color:var(--c2);box-shadow:0 0 34px rgba(139,92,246,.28)}
+.mail{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;margin-bottom:10px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);animation:in .5s both}
+@keyframes in{from{opacity:0;transform:translateY(-14px)}}
+.mail i{width:10px;height:10px;border-radius:50%;background:#ff4d6d;margin-top:7px;flex:none;box-shadow:0 0 10px #ff4d6d}
+.mail div{flex:1;min-width:0}.mail b{display:block;font-size:14.5px}.mail em{display:block;font-style:normal;font-size:13.5px;color:var(--mute);line-height:1.45}
+section{padding:70px 0}
+h2.t{font-size:clamp(28px,4vw,40px);margin-bottom:30px;display:inline-block;position:relative;padding-bottom:12px}
+h2.t:after{content:"";position:absolute;left:0;bottom:0;width:64%;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--c1),var(--c2));box-shadow:var(--glow)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.about{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center}
+.av{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;font:800 46px Sora;color:#fff;background:linear-gradient(135deg,var(--c3),var(--c2));box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--c1),0 0 36px rgba(34,211,238,.5)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:20px;padding:3px 12px;color:var(--mute);background:rgba(255,255,255,.04)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;margin-top:30px}
+.stats .card{text-align:center;padding:16px}.stats b{display:block;font:800 34px Sora;color:var(--c1);text-shadow:var(--glow)}.stats span{font-size:13.5px;color:var(--mute)}
+.two{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.two h3.k{font-size:20px;margin-bottom:18px;color:var(--c1)}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.it{position:relative;padding:0 0 24px 24px}
+.it:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--c1);box-shadow:0 0 12px var(--c1)}
+.it small{color:var(--c2);font-weight:600;font-size:13.5px}.it h3{font-size:17px;margin:2px 0 4px}
+.it ul{margin:6px 0 0;padding-left:18px;color:var(--mute);font-size:14.5px}.it p{margin:0;color:var(--mute);font-size:14.5px}
+.f{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.f button{background:var(--surf);border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:6px 18px;font-size:14px}
+.f button[aria-pressed=true]{background:linear-gradient(90deg,var(--c1),var(--c3));color:#031022;border-color:transparent;box-shadow:var(--glow)}
+.proj{cursor:pointer;position:relative;overflow:hidden}
+.proj:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2))}
+.proj.h{display:none}.proj h3{font-size:19px;margin:6px 0}
+.proj p{margin:0;color:var(--mute);font-size:14.5px}
+.proj .more{display:none;margin-top:10px;font-size:14.5px}.proj.o .more{display:block}
+.proj .hint{font-size:13px;color:var(--c1);margin-top:12px}
+.sk{margin-bottom:15px}.sk div{display:flex;justify-content:space-between;font-size:14.5px;font-weight:500}
+.bar{height:8px;background:rgba(255,255,255,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c2));box-shadow:0 0 12px var(--c1);transition:width 1.2s ease}
+.cta{text-align:center;padding:44px 24px;border-color:var(--c2);box-shadow:0 0 40px rgba(139,92,246,.25)}
+.cta h2{font-size:clamp(26px,4vw,38px);margin-bottom:10px}.cta p{color:var(--mute);margin:0 auto 18px;max-width:52ch}
+footer{text-align:center;color:var(--mute);font-size:13.5px;padding:28px 0}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.about{grid-template-columns:1fr;justify-items:start}
+#bg{display:inline-block}.links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:14px;padding:18px 22px;background:var(--bg);border-bottom:1px solid var(--line)}.links.on{display:flex}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="cv" aria-hidden="true"></canvas><div id="glow" aria-hidden="true"></div>
+<nav><div class="wrap"><a class="logo" href="#hero">SM.</a>
+<div class="links" id="lk"><a href="#hero">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<div><button class="ib" id="tg" aria-label="Switch light or dark theme">◐</button> <button class="ib" id="bg" aria-label="Open menu">☰</button></div></div></nav>
+
+<main>
+<section class="hero" id="hero"><div class="wrap">
+<div><div class="hi">Hi, I’m</div><h1>Sheik Muksena N</h1>
+<div class="role" aria-live="polite"><span id="ty"></span><span class="cur"></span></div>
+<p class="sub">MCA student in Hosur who builds web apps, automates email workflows and turns data into clear reports.</p>
+<a class="btn p" href="#projects">View projects</a><a class="btn s" href="#contact">Contact me</a><a class="btn s" href="Sheik_Muksena_Resume.pdf" download>Download resume</a></div>
+<div class="card inbox" aria-label="Highlights from my work"><h2>Inbox: new from Sheik</h2><div id="mails"></div></div>
+</div></section>
+
+<section id="about"><div class="wrap"><h2 class="t">About me</h2>
+<div class="about"><div class="av" aria-hidden="true">SM</div>
+<div><p style="margin:0;color:var(--mute)">I’m a motivated, detail-oriented MCA student with a strong foundation in computer applications and a keen interest in software testing, data analysis and emerging technologies. I want to apply my technical and problem-solving skills in a growth-oriented organisation and keep learning as I build.</p>
+<div class="chips"><span class="chip">Hosur, Tamil Nadu</span><span class="chip">English</span><span class="chip">Tamil</span><span class="chip">Hindi</span><span class="chip">Urdu</span></div></div></div>
+<div class="stats"><div class="card"><b data-n="4">0</b><span>Projects</span></div><div class="card"><b data-n="2">0</b><span>Work roles</span></div><div class="card"><b data-n="6">0</b><span>Certifications</span></div><div class="card"><b data-n="9">0</b><span>Tech skills</span></div></div>
+</div></section>
+
+<section id="experience"><div class="wrap"><h2 class="t">Experience and education</h2>
+<div class="two">
+<div><h3 class="k">Experience</h3><div class="tl">
+<div class="it"><small>2025 – 2026</small><h3>24/7 ai, Bangalore</h3><ul><li>Worked on real-time AI tools and automation solutions.</li><li>Helped with data preprocessing, model testing and user support.</li><li>Analysed data and prepared reports for clients.</li></ul></div>
+<div class="it"><small>2023 – 2024</small><h3>D-Mart, Accounts Department (part-time)</h3><ul><li>Accounts documentation and record maintenance using SAP.</li><li>Data verification and periodic auditing support.</li></ul></div></div></div>
+<div><h3 class="k">Education</h3><div class="tl">
+<div class="it"><small>2026 – 2028</small><h3>MCA (pursuing)</h3><p>Adhiyamaan College of Engineering, Hosur</p></div>
+<div class="it"><small>2022 – 2025</small><h3>B.Com (Computer Applications)</h3><p>St Joseph’s College of Arts and Science for Women</p></div>
+<div class="it"><small>2021 – 2022</small><h3>HSC, 89%</h3><p>Mount Carmel Matric Higher Secondary School, Hosur</p></div>
+<div class="it"><small>2019 – 2020</small><h3>SSLC, 90%</h3><p>Mount Carmel Matric Higher Secondary School, Hosur</p></div></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><h2 class="t">Projects</h2>
+<div class="f" role="group" aria-label="Filter projects"><button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="web">Web apps</button><button aria-pressed="false" data-f="ai">AI and data</button></div>
+<div class="grid">
+<div class="card proj" data-c="ai web" tabindex="0"><h3>AI-Based Resume Screening System</h3><p>A web app that screens and ranks resumes automatically.</p><div class="more">Uses NLP to extract skills and match them to a job description, with a dashboard to manage candidates and view results.</div><div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">NLP</span><span class="chip">SQLite</span></div><div class="hint">Tap for details</div></div>
+<div class="card proj" data-c="ai" tabindex="0"><h3>AR Consumer Behaviour Analysis</h3><p>An augmented reality app that studies how AR changes buying decisions.</p><div class="more">Image tracking and 3D models give interactive product views. I ran surveys and analysed responses to measure AR’s impact.</div><div class="chips"><span class="chip">AR</span><span class="chip">3D models</span><span class="chip">Survey analysis</span></div><div class="hint">Tap for details</div></div>
+<div class="card proj" data-c="web" tabindex="0"><h3>Branded Email Notification Service</h3><p>A college-branded system for welcome, exam result and disqualification emails.</p><div class="more">Dynamic templates, API triggers, email logs and a retry mechanism for failed emails. I learned API integration, email automation and application security.</div><div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">PHPMailer</span></div><div class="hint">Tap for details</div></div>
+<div class="card proj" data-c="web ai" tabindex="0"><h3>SmartAssess 360</h3><p>A student assessment tracking and analytics portal for Adhiyamaan College (in progress).</p><div class="more">Student and admin modules for assessment records, progress tracking and performance monitoring, with dashboards and data-driven insights.</div><div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">MySQL</span><span class="chip">Git</span></div><div class="hint">Tap for details</div></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><h2 class="t">Skills</h2>
+<div class="grid">
+<div class="card" id="bars"></div>
+<div class="card"><h3 style="margin-bottom:12px">Tools and strengths</h3><div class="chips" style="margin:0 0 22px"><span class="chip">SQL and MySQL</span><span class="chip">REST API integration</span><span class="chip">SQLite</span><span class="chip">VS Code</span><span class="chip">MS Excel and Office</span><span class="chip">Email automation</span><span class="chip">Data analysis and reporting</span></div>
+<h3 style="margin-bottom:12px">Soft skills</h3><div class="chips" style="margin:0 0 22px"><span class="chip">Communication</span><span class="chip">Teamwork</span><span class="chip">Problem solving</span><span class="chip">Time management</span><span class="chip">Attention to detail</span></div>
+<h3 style="margin-bottom:12px">Certifications</h3><div class="chips" style="margin:0"><span class="chip">Advanced Tally with GST</span><span class="chip">SWAYAM: Digital Marketing</span><span class="chip">SWAYAM: Employability Skills</span><span class="chip">AI Fluency</span><span class="chip">Building with the Claude API</span><span class="chip">AI Capabilities and Limitations</span></div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="card cta">
+<h2>Let’s work together</h2><p>Open to internships and entry-level roles in software testing, data analysis and web development.</p>
+<a class="btn p" href="mailto:muksena422@gmail.com">Email me</a><a class="btn s" href="https://www.linkedin.com/in/sheik-muksena-n-a1b413299" target="_blank" rel="noopener">LinkedIn</a><a class="btn s" href="https://github.com/muksena422-commits" target="_blank" rel="noopener">GitHub</a><a class="btn s" href="tel:+918072466081">8072466081</a>
+</div></div></section>
+</main>
+<footer>© 2026 Sheik Muksena N</footer>
+
+<script>
+var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
+var roles=["MCA student","Web developer","Email automation builder","Aspiring software tester","Data and AI enthusiast"],ri=0,ci=0,del=false,ty=$("#ty");
+function tick(){var w=roles[ri];ty.textContent=w.slice(0,ci);
+if(!del&&ci<w.length){ci++;setTimeout(tick,70)}else if(!del){del=true;setTimeout(tick,1400)}else if(ci>0){ci--;setTimeout(tick,35)}else{del=false;ri=(ri+1)%roles.length;setTimeout(tick,300)}}tick();
+var M=[["Resume screening system","Ranks candidates with NLP skill matching."],["Branded email service","Welcome and exam result emails sent automatically."],["SmartAssess 360","Assessment tracking portal for Adhiyamaan College."],["24/7 ai","Tested AI tools and prepared client reports."],["AR consumer study","Analysed how AR shapes buying behaviour."]],mi=0,box=$("#mails");
+function addMail(){var d=document.createElement("div");d.className="mail";d.innerHTML="<i></i><div><b></b><em></em></div>";
+d.querySelector("b").textContent=M[mi%M.length][0];d.querySelector("em").textContent=M[mi%M.length][1];mi++;box.prepend(d);while(box.children.length>3)box.lastChild.remove()}
+addMail();addMail();addMail();setInterval(addMail,2800);
+var S=[["Python",85],["PHP and MySQL",80],["HTML, CSS and JavaScript",80],["Flask",75],["C",70],["Git and GitHub",75]],b=$("#bars");
+b.innerHTML="<h3 style='margin-bottom:16px'>Technical skills</h3>"+S.map(function(s){return '<div class="sk"><div><span>'+s[0]+'</span></div><div class="bar"><i data-w="'+s[1]+'"></i></div></div>'}).join("");
+new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){b.querySelectorAll("i").forEach(function(i){i.style.width=i.dataset.w+"%"});o.disconnect()}})}).observe(b);
+var so=new IntersectionObserver(function(e,o){e.forEach(function(x){if(!x.isIntersecting)return;var el=x.target,n=+el.dataset.n,c=0,t=setInterval(function(){c++;el.textContent=c;if(c>=n)clearInterval(t)},160);o.unobserve(el)})});$$("[data-n]").forEach(function(e){so.observe(e)});
+$$(".f button").forEach(function(btn){btn.onclick=function(){$$(".f button").forEach(function(x){x.setAttribute("aria-pressed",x===btn)});$$(".proj").forEach(function(c){c.classList.toggle("h",btn.dataset.f!=="all"&&c.dataset.c.indexOf(btn.dataset.f)<0)})}});
+$$(".proj").forEach(function(c){function t(){c.classList.toggle("o");c.querySelector(".hint").textContent=c.classList.contains("o")?"Tap to close":"Tap for details"}c.onclick=t;c.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();t()}}});
+var r=document.documentElement;$("#tg").onclick=function(){r.dataset.theme=r.dataset.theme==="dark"?"light":"dark"};
+$("#bg").onclick=function(){$("#lk").classList.toggle("on")};$$("#lk a").forEach(function(a){a.onclick=function(){$("#lk").classList.remove("on")}});
+var g=$("#glow");addEventListener("pointermove",function(e){g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"});
+var cv=$("#cv"),x=cv.getContext("2d"),P=[],W,H;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+for(var i=0;i<46;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4});
+function dr(){x.clearRect(0,0,W,H);var dk=r.dataset.theme==="dark",col=dk?"34,211,238":"29,78,216";
+P.forEach(function(p,i){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.fillStyle="rgba("+col+",.7)";x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.strokeStyle="rgba("+col+","+(.22*(1-d/130))+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}});
+requestAnimationFrame(dr)}
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)dr();
+</script>
+</body>
+</html>
